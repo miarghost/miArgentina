@@ -1,0 +1,53 @@
+body::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  z-index: -1;
+}
+.Bu-section-1 .Bu-sheet-1 {
+  min-height: 291px;
+}
+
+.Bu-section-1 .Bu-image-1 {
+  width: 256px;
+  height: 21px;
+  margin: 4px auto 60px 30px;
+}
+
+@media (max-width: 575px) {
+  .Bu-section-1 .Bu-sheet-1 {
+    min-height: 318px;
+  }
+
+  .Bu-section-1 .Bu-image-1 {
+    width: 280px;
+    height: 23px;
+    margin-left: auto;
+  }
+}.Bu-section-2 .Bu-sheet-1 {
+  min-height: 500px;
+}
+
+.Bu-section-2 .Bu-image-1 {
+  height: 218px;
+  margin-top: 50px;
+  margin-bottom: 60px;
+}
+
+.Bu-section-2 .Bu-image-2 {
+  width: 251px;
+  height: 87px;
+  margin: 56px auto 60px -14px;
+}
+
+@media (max-width: 575px) {
+  .Bu-section-2 .Bu-image-1 {
+    height: 251px;
+    width: 391px;
+    margin: -268px -26px 0;
+  }
+}

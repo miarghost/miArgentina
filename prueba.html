@@ -1,0 +1,87 @@
+<script>
+  var imagenes4 =['imagen46' , 'imagen47' , 'imagen48' , 'imagen49' , 'imagen50' , 'imagen51' , 'imagen52' , 'imagen53' , 'imagen54' , 'imagen55' , 'imagen56'];
+  var indiceActual4 = 0;
+  var tiempoEspera4 = 10;
+  var primVez4 = true;
+  
+  var startX, startY;
+  var lastChangeTime4 = 0;
+
+  function handleTouchStart(event) {
+    startX = event.touches[0].pageX;
+    startY = event.touches[0].pageY;
+  }
+
+  function handleTouchMove7(event) {
+    var currentTime = new Date().getTime();
+    if (currentTime - lastChangeTime4 < 100) {
+  return;
+  }
+  lastChangeTime4= currentTime;
+  var touchX = event.touches[0].pageX;
+  var touchY = event.touches[0].pageY;
+  var deltaX = startX - touchX;
+  var deltaY = startY - touchY;
+  if (Math.abs(deltaX) > Math.abs(deltaY)) {
+    if (deltaX > 20 ) {
+      cambiarImagen7();
+    }
+  }
+}
+  function handleTouchMove8(event) {
+  var currentTime = new Date().getTime();
+  if (currentTime - lastChangeTime4 < 400) {
+    return;
+  }
+  lastChangeTime4= currentTime;
+  var touchX = event.touches[0].pageX;
+  var touchY = event.touches[0].pageY;
+  var deltaX = startX - touchX;
+  var deltaY = startY - touchY;
+  if (Math.abs(deltaX) > Math.abs(deltaY)) {
+    if (deltaX > 20 ) {
+      cambiarImagen8();
+    }
+  }
+}
+
+var myImage7 = document.getElementById("imagen46");
+        myImage7.addEventListener("touchstart", handleTouchStart, false);
+        myImage7.addEventListener("touchmove", handleTouchMove7, false);
+  
+        var myImage8 = document.getElementById("imagen56");
+        myImage8.addEventListener("touchstart", handleTouchStart, false);
+        myImage8.addEventListener("touchmove", handleTouchMove8, false);
+  
+  function cambiarImagen7(){
+    if (indiceActual4 < imagenes4.length){
+    document.getElementById(imagenes4[indiceActual4]).style.display = 'none';
+    indiceActual4++;
+    if (indiceActual4 == imagenes4.length){
+    document.getElementById(imagenes4[imagenes4.length-1]).style.display = 'inline';
+    return;
+    }
+  document.getElementById(imagenes4[indiceActual4]).style.display = 'inline';
+  setTimeout(cambiarImagen7, tiempoEspera4);
+  }
+}
+
+
+  function cambiarImagen8(){
+  if (primVez4==true) {
+  indiceActual4 = imagenes4.length - 1;
+    primVez4 = false;
+  }
+  document.getElementById(imagenes4[indiceActual4]).style.display = 'none';
+  indiceActual4--;
+  if (indiceActual4 < 0) {
+    document.getElementById(imagenes4[0]).style.display = 'inline';
+    indiceActual4= 0;
+    primVez4 = true;
+    return;
+
+  }
+    document.getElementById(imagenes4[indiceActual4]).style.display = 'inline';
+    setTimeout(cambiarImagen8, tiempoEspera4);
+}
+</script>

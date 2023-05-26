@@ -1,0 +1,182 @@
+body::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  z-index: -1;
+}
+.u-section-1 .u-sheet-1 {
+  min-height: 645px;
+}
+
+.u-section-1 .u-image-1 {
+  height: 397px;
+  margin-top: 0;
+  margin-bottom: 60px;
+}
+
+.u-section-1 .u-image-2 {
+  width: 167px;
+  height: 114px;
+  margin: -436px auto 60px -20px;
+}
+
+@media (max-width: 575px) {
+  .u-section-1 .u-image-1 {
+    width: 416px;
+    height: 429px;
+    margin: 7px -38px 0;
+  }
+}.u-section-2 .u-sheet-1 {
+  min-height: 60px;
+}
+
+.u-section-2 .u-image-1 {
+  width: 440px;
+  height: 60px;
+  margin: 0 -50px;
+}
+
+@media (max-width: 575px) {
+  .u-section-2 .u-sheet-1 {
+    min-height: 52px;
+  }
+
+  .u-section-2 .u-image-1 {
+    width: 402px;
+    height: 52px;
+    margin-left: -31px;
+    margin-right: -31px;
+  }
+}
+.Au-section-1 .Au-sheet-1 {
+  min-height: 502px;
+}
+
+.Au-section-1 .Au-image-1 {
+  width: 384px;
+  height: 233px;
+  margin: 47px -22px 60px;
+}
+
+.Au-section-1 .Au-custom-html-1 {
+  height: auto;
+  min-height: 138px;
+  margin: 0 0 60px 30px;
+}
+
+.Au-section-1 .Au-image-2 {
+  width: 318px;
+  height: 38px;
+  margin: -51px auto 60px;
+}
+
+@media (max-width: 575px) {
+  .Au-section-1 .Au-image-1 {
+    margin-top: 41px;
+    margin-bottom: 0;
+  }
+
+  .Au-section-1 .Au-custom-html-1 {
+    margin: -213px 41px 0 -11px;
+  }
+}
+
+.Bu-section-1 .Bu-sheet-1 {
+  min-height: 291px;
+}
+
+.Bu-section-1 .Bu-image-1 {
+  width: 256px;
+  height: 21px;
+  margin: 4px auto 60px 30px;
+}
+
+@media (max-width: 575px) {
+  .Bu-section-1 .Bu-sheet-1 {
+    min-height: 318px;
+  }
+
+  .Bu-section-1 .Bu-image-1 {
+    width: 280px;
+    height: 23px;
+    margin-left: auto;
+  }
+}.Bu-section-2 .Bu-sheet-1 {
+  min-height: 500px;
+}
+
+.Bu-section-2 .Bu-image-1 {
+  height: 218px;
+  margin-top: 50px;
+  margin-bottom: 60px;
+}
+
+.Bu-section-2 .Bu-image-2 {
+  width: 251px;
+  height: 87px;
+  margin: 56px auto 60px -14px;
+}
+
+@media (max-width: 575px) {
+  .Bu-section-2 .Bu-image-1 {
+    height: 251px;
+    width: 391px;
+    margin: -268px -26px 0;
+  }
+}
+
+#colorGris{
+  background-color: #F8F8F8;
+}
+
+#ultimo + div{
+  visibility: hidden;
+}
+.splash-screen {
+  background-image: url(images/pantallacarga.jpeg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+#canvas {
+  width: 400px;
+  height: 400px;
+}
+
+.cube {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.cube-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.cube-face.front {
+  transform: translateZ(50%);
+  background-image: url('images/dnis/dnifrente1.jpg');
+}
+
+.cube-face.back {
+  transform: rotateY(180deg) translateZ(50%);
+  background-image: url('images/dnis/dniatras1.jpg');
+}
+
+.rotate-180 {
+  transform: rotateY(180deg);
+}
