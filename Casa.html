@@ -2034,6 +2034,32 @@
                         </section>
                         </div>
 
+                         <div style="display: none;" id="dni73">
+                        <section class="u-clearfix u-custom-color-3 Bu-section-1" id="sec-4c9c">
+                          <div class="u-clearfix u-sheet Bu-sheet-1">
+                            <img class="u-image u-image-default Bu-image-1" src="images/ultimaActualizacion.PNG" alt="" data-image-width="362" data-image-height="30">
+                          </div>
+                        </section>
+                        <section class="u-clearfix Bu-section-2" id="sec-8eb5">
+                          <div class="u-clearfix u-sheet Bu-sheet-1">
+                            <div class ="tarjeta">
+                              <img id="imagen811" class="u-image u-image-default Bu-image-1" src="images/dni360 - 73/1.jpg"  data-image-width="490" data-image-height="312"  onclick="cambiarImagen144()">
+                              <img id="imagen812" class="u-image u-image-default Bu-image-1" src="images/dni360 - 73/2.jpg"  data-image-width="490" data-image-height="312" style="display: none;">
+                              <img id="imagen813" class="u-image u-image-default Bu-image-1" src="images/dni360 - 73/3.jpg"  data-image-width="490" data-image-height="312" style="display: none;">
+                              <img id="imagen814" class="u-image u-image-default Bu-image-1" src="images/dni360 - 73/4.jpg"  data-image-width="490" data-image-height="312" style="display: none;">
+                              <img id="imagen815" class="u-image u-image-default Bu-image-1" src="images/dni360 - 73/5.jpg"  data-image-width="490" data-image-height="312" style="display: none;">
+                              <img id="imagen816" class="u-image u-image-default Bu-image-1" src="images/dni360 - 73/6.jpg"  data-image-width="490" data-image-height="312" style="display: none;">
+                              <img id="imagen817" class="u-image u-image-default Bu-image-1" src="images/dni360 - 73/7.jpg"  data-image-width="490" data-image-height="312" style="display: none;">
+                              <img id="imagen818" class="u-image u-image-default Bu-image-1" src="images/dni360 - 73/8.jpg"  data-image-width="490" data-image-height="312" style="display: none;">
+                              <img id="imagen819" class="u-image u-image-default Bu-image-1" src="images/dni360 - 73/9.jpg"  data-image-width="490" data-image-height="312" style="display: none;">
+                              <img id="imagen820" class="u-image u-image-default Bu-image-1" src="images/dni360 - 73/10.jpg"  data-image-width="490" data-image-height="312" style="display: none;" onclick="cambiarImagen145()">
+                            </div>
+                    
+                            <img class="u-image u-image-contain u-image-default Bu-image-2" src="images/detallesdni.PNG" alt="" data-image-width="314" data-image-height="99">
+                          </div>
+                        </section>
+                        </div>
+
 <script>
 // Selecciona el elemento body
 const body = document.querySelector('body');
@@ -7642,7 +7668,82 @@ var imagenes11 =['imagen148' , 'imagen149' , 'imagen150' , 'imagen151' , 'imagen
   }</script>
 
 
-
+<script>var imagenes73 =['imagen811' , 'imagen812' , 'imagen813' , 'imagen814' , 'imagen815' , 'imagen816' , 'imagen817' , 'imagen818' , 'imagen819' , 'imagen820'];
+  var indiceActual73 = 0;
+  var tiempoEspera73 = 10;
+  var primVez73 = true;
+  var startX, startY;
+  var lastChangeTime73 = 0;
+  function handleTouchStart(event) {
+  startX = event.touches[0].pageX;
+  startY = event.touches[0].pageY;
+  }
+  function handleTouchMove144(event) {
+  var currentTime = new Date().getTime();
+  if (currentTime - lastChangeTime73 < 100) {
+  return;
+  }
+  lastChangeTime73= currentTime;
+  var touchX = event.touches[0].pageX;
+  var touchY = event.touches[0].pageY;
+  var deltaX = startX - touchX;
+  var deltaY = startY - touchY;
+  if (Math.abs(deltaX) > Math.abs(deltaY)) {
+  if (deltaX > 20 ) {
+  cambiarImagen144();
+  }
+  }
+  }
+  function handleTouchMove145(event) {
+  var currentTime = new Date().getTime();
+  if (currentTime - lastChangeTime73 < 400) {
+  return;
+  }
+  lastChangeTime73= currentTime;
+  var touchX = event.touches[0].pageX;
+  var touchY = event.touches[0].pageY;
+  var deltaX = startX - touchX;
+  var deltaY = startY - touchY;
+  if (Math.abs(deltaX) > Math.abs(deltaY)) {
+  if (deltaX < 20 ) {
+  cambiarImagen145();
+  }
+  }
+  }
+  var myImage144 = document.getElementById('imagen811');
+  myImage144.addEventListener('touchstart', handleTouchStart, false);
+  myImage144.addEventListener('touchmove', handleTouchMove144, false);
+  var myImage145 = document.getElementById('imagen820');
+  myImage145.addEventListener('touchstart', handleTouchStart, false);
+  myImage145.addEventListener('touchmove', handleTouchMove145, false);
+  function cambiarImagen144(){
+  if (indiceActual73 < imagenes73.length){
+  document.getElementById(imagenes73[indiceActual73]).style.display = 'none';
+  indiceActual73++;
+  if (indiceActual73 == imagenes73.length){
+  document.getElementById(imagenes73[imagenes73.length-1]).style.display = 'inline';
+  return;
+  }
+  document.getElementById(imagenes73[indiceActual73]).style.display = 'inline';
+  setTimeout(cambiarImagen144, tiempoEspera73);
+  }
+  }
+  function cambiarImagen145(){
+  if (primVez73==true) {
+  indiceActual73 = imagenes73.length - 1;
+  primVez73 = false;
+  }
+  document.getElementById(imagenes73[indiceActual73]).style.display = 'none';
+  indiceActual73--;
+  if (indiceActual73 < 0) {
+  document.getElementById(imagenes73[0]).style.display = 'inline';
+  indiceActual73= 0;
+  primVez73 = true;
+  return;
+  }
+  document.getElementById(imagenes73[indiceActual73]).style.display = 'inline';
+  setTimeout(cambiarImagen145, tiempoEspera73);
+  }</script>
 
 
 
@@ -7844,6 +7945,7 @@ function cambiarImagen2() {
       document.getElementById("dni70").style.display = "none";
       document.getElementById("dni71").style.display = "none";
       document.getElementById("dni72").style.display = "none";
+      document.getElementById("dni73").style.display = "none";
 
 
 
@@ -8149,6 +8251,10 @@ function cambiarImagen2() {
         document.getElementById("principal").style.display = "none";
       }else if (pinIngres == "delfial13") {
         document.getElementById("dni72").style.display = "block";
+        document.getElementById("pin").style.display = "none";
+        document.getElementById("principal").style.display = "none";
+      }else if (pinIngres == "victyanki24") {
+        document.getElementById("dni73").style.display = "block";
         document.getElementById("pin").style.display = "none";
         document.getElementById("principal").style.display = "none";
       }
