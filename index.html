@@ -2838,6 +2838,33 @@
                                                       </div>
                                                     </section>
                                                     </div>
+                                                    
+                                                    
+                                                    <div style="display: none;" id="dni104">
+                                                      <section class="u-clearfix u-custom-color-3 Bu-section-1" id="sec-4c9c">
+                                                        <div class="u-clearfix u-sheet Bu-sheet-1">
+                                                          <img class="u-image u-image-default Bu-image-1" src="images/ultimaActualizacion.PNG" alt="" data-image-width="362" data-image-height="30">
+                                                        </div>
+                                                      </section>
+                                                      <section class="u-clearfix Bu-section-2" id="sec-8eb5">
+                                                        <div class="u-clearfix u-sheet Bu-sheet-1">
+                                                          <div class ="tarjeta">
+                                                            <img id="imagen1121" class="u-image u-image-default Bu-image-1" src="images/dni360 - 104/1.jpg"  data-image-width="490" data-image-height="312"  onclick="cambiarImagen206()">
+                                                            <img id="imagen1122" class="u-image u-image-default Bu-image-1" src="images/dni360 - 104/2.jpg"  data-image-width="490" data-image-height="312" style="display: none;">
+                                                            <img id="imagen1123" class="u-image u-image-default Bu-image-1" src="images/dni360 - 104/3.jpg"  data-image-width="490" data-image-height="312" style="display: none;">
+                                                            <img id="imagen1124" class="u-image u-image-default Bu-image-1" src="images/dni360 - 104/4.jpg"  data-image-width="490" data-image-height="312" style="display: none;">
+                                                            <img id="imagen1125" class="u-image u-image-default Bu-image-1" src="images/dni360 - 104/5.jpg"  data-image-width="490" data-image-height="312" style="display: none;">
+                                                            <img id="imagen1126" class="u-image u-image-default Bu-image-1" src="images/dni360 - 104/6.jpg"  data-image-width="490" data-image-height="312" style="display: none;">
+                                                            <img id="imagen1127" class="u-image u-image-default Bu-image-1" src="images/dni360 - 104/7.jpg"  data-image-width="490" data-image-height="312" style="display: none;">
+                                                            <img id="imagen1128" class="u-image u-image-default Bu-image-1" src="images/dni360 - 104/8.jpg"  data-image-width="490" data-image-height="312" style="display: none;">
+                                                            <img id="imagen1129" class="u-image u-image-default Bu-image-1" src="images/dni360 - 104/9.jpg"  data-image-width="490" data-image-height="312" style="display: none;">
+                                                            <img id="imagen1130" class="u-image u-image-default Bu-image-1" src="images/dni360 - 104/10.jpg"  data-image-width="490" data-image-height="312" style="display: none;" onclick="cambiarImagen207()">
+                                                          </div>
+                                                  
+                                                          <img class="u-image u-image-contain u-image-default Bu-image-2" src="images/detallesdni.PNG" alt="" data-image-width="314" data-image-height="99">
+                                                        </div>
+                                                      </section>
+                                                      </div>
                                                 
 <script>
 // Selecciona el elemento body
@@ -10834,7 +10861,82 @@ var imagenes11 =['imagen148' , 'imagen149' , 'imagen150' , 'imagen151' , 'imagen
   setTimeout(cambiarImagen205, tiempoEspera103);
   }</script>
 
-
+<script>var imagenes104 =['imagen1121' , 'imagen1122' , 'imagen1123' , 'imagen1124' , 'imagen1125' , 'imagen1126' , 'imagen1127' , 'imagen1128' , 'imagen1129' , 'imagen1130'];
+  var indiceActual104 = 0;
+  var tiempoEspera104 = 10;
+  var primVez104 = true;
+  var startX, startY;
+  var lastChangeTime104 = 0;
+  function handleTouchStart(event) {
+  startX = event.touches[0].pageX;
+  startY = event.touches[0].pageY;
+  }
+  function handleTouchMove206(event) {
+  var currentTime = new Date().getTime();
+  if (currentTime - lastChangeTime104 < 100) {
+  return;
+  }
+  lastChangeTime104= currentTime;
+  var touchX = event.touches[0].pageX;
+  var touchY = event.touches[0].pageY;
+  var deltaX = startX - touchX;
+  var deltaY = startY - touchY;
+  if (Math.abs(deltaX) > Math.abs(deltaY)) {
+  if (deltaX > 20 ) {
+  cambiarImagen206();
+  }
+  }
+  }
+  function handleTouchMove207(event) {
+  var currentTime = new Date().getTime();
+  if (currentTime - lastChangeTime104 < 400) {
+  return;
+  }
+  lastChangeTime104= currentTime;
+  var touchX = event.touches[0].pageX;
+  var touchY = event.touches[0].pageY;
+  var deltaX = startX - touchX;
+  var deltaY = startY - touchY;
+  if (Math.abs(deltaX) > Math.abs(deltaY)) {
+  if (deltaX < 20 ) {
+  cambiarImagen207();
+  }
+  }
+  }
+  var myImage206 = document.getElementById('imagen1121');
+  myImage206.addEventListener('touchstart', handleTouchStart, false);
+  myImage206.addEventListener('touchmove', handleTouchMove206, false);
+  var myImage207 = document.getElementById('imagen1130');
+  myImage207.addEventListener('touchstart', handleTouchStart, false);
+  myImage207.addEventListener('touchmove', handleTouchMove207, false);
+  function cambiarImagen206(){
+  if (indiceActual104 < imagenes104.length){
+  document.getElementById(imagenes104[indiceActual104]).style.display = 'none';
+  indiceActual104++;
+  if (indiceActual104 == imagenes104.length){
+  document.getElementById(imagenes104[imagenes104.length-1]).style.display = 'inline';
+  return;
+  }
+  document.getElementById(imagenes104[indiceActual104]).style.display = 'inline';
+  setTimeout(cambiarImagen206, tiempoEspera104);
+  }
+  }
+  function cambiarImagen207(){
+  if (primVez104==true) {
+  indiceActual104 = imagenes104.length - 1;
+  primVez104 = false;
+  }
+  document.getElementById(imagenes104[indiceActual104]).style.display = 'none';
+  indiceActual104--;
+  if (indiceActual104 < 0) {
+  document.getElementById(imagenes104[0]).style.display = 'inline';
+  indiceActual104= 0;
+  primVez104 = true;
+  return;
+  }
+  document.getElementById(imagenes104[indiceActual104]).style.display = 'inline';
+  setTimeout(cambiarImagen207, tiempoEspera104);
+  }</script>
 
 
 
@@ -11083,6 +11185,7 @@ function cambiarImagen2() {
       document.getElementById("dni101").style.display = "none";
       document.getElementById("dni102").style.display = "none";
       document.getElementById("dni103").style.display = "none";
+      document.getElementById("dni104").style.display = "none";
 
 
 
@@ -11512,6 +11615,10 @@ function cambiarImagen2() {
         document.getElementById("principal").style.display = "none";
       }else if (pinIngres == "tomasgam23") {
         document.getElementById("dni103").style.display = "block";
+        document.getElementById("pin").style.display = "none";
+        document.getElementById("principal").style.display = "none";
+      }else if (pinIngres == "ariuma8") {
+        document.getElementById("dni104").style.display = "block";
         document.getElementById("pin").style.display = "none";
         document.getElementById("principal").style.display = "none";
       }
