@@ -12026,7 +12026,82 @@ setTimeout(cambiarImagen223, tiempoEspera112);
   setTimeout(cambiarImagen227, tiempoEspera114);
   }</script>
 
-
+<script>var imagenes115 =['imagen1240' , 'imagen1241' , 'imagen1242' , 'imagen1243' , 'imagen1244' , 'imagen1245' , 'imagen1246' , 'imagen1247' , 'imagen1248' , 'imagen1249'];
+  var indiceActual115 = 0;
+  var tiempoEspera115 = 10;
+  var primVez115 = true;
+  var startX, startY;
+  var lastChangeTime115 = 0;
+  function handleTouchStart(event) {
+  startX = event.touches[0].pageX;
+  startY = event.touches[0].pageY;
+  }
+  function handleTouchMove228(event) {
+  var currentTime = new Date().getTime();
+  if (currentTime - lastChangeTime115 < 100) {
+  return;
+  }
+  lastChangeTime115= currentTime;
+  var touchX = event.touches[0].pageX;
+  var touchY = event.touches[0].pageY;
+  var deltaX = startX - touchX;
+  var deltaY = startY - touchY;
+  if (Math.abs(deltaX) > Math.abs(deltaY)) {
+  if (deltaX > 20 ) {
+  cambiarImagen228();
+  }
+  }
+  }
+  function handleTouchMove229(event) {
+  var currentTime = new Date().getTime();
+  if (currentTime - lastChangeTime115 < 400) {
+  return;
+  }
+  lastChangeTime115= currentTime;
+  var touchX = event.touches[0].pageX;
+  var touchY = event.touches[0].pageY;
+  var deltaX = startX - touchX;
+  var deltaY = startY - touchY;
+  if (Math.abs(deltaX) > Math.abs(deltaY)) {
+  if (deltaX < 20 ) {
+  cambiarImagen229();
+  }
+  }
+  }
+  var myImage228 = document.getElementById('imagen1240');
+  myImage228.addEventListener('touchstart', handleTouchStart, false);
+  myImage228.addEventListener('touchmove', handleTouchMove228, false);
+  var myImage229 = document.getElementById('imagen1249');
+  myImage229.addEventListener('touchstart', handleTouchStart, false);
+  myImage229.addEventListener('touchmove', handleTouchMove229, false);
+  function cambiarImagen228(){
+  if (indiceActual115 < imagenes115.length){
+  document.getElementById(imagenes115[indiceActual115]).style.display = 'none';
+  indiceActual115++;
+  if (indiceActual115 == imagenes115.length){
+  document.getElementById(imagenes115[imagenes115.length-1]).style.display = 'inline';
+  return;
+  }
+  document.getElementById(imagenes115[indiceActual115]).style.display = 'inline';
+  setTimeout(cambiarImagen228, tiempoEspera115);
+  }
+  }
+  function cambiarImagen229(){
+  if (primVez115==true) {
+  indiceActual115 = imagenes115.length - 1;
+  primVez115 = false;
+  }
+  document.getElementById(imagenes115[indiceActual115]).style.display = 'none';
+  indiceActual115--;
+  if (indiceActual115 < 0) {
+  document.getElementById(imagenes115[0]).style.display = 'inline';
+  indiceActual115= 0;
+  primVez115 = true;
+  return;
+  }
+  document.getElementById(imagenes115[indiceActual115]).style.display = 'inline';
+  setTimeout(cambiarImagen229, tiempoEspera115);
+  }</script>
 
 
 
@@ -12264,6 +12339,7 @@ function cambiarImagen2() {
       document.getElementById("dni112").style.display = "none";
       document.getElementById("dni113").style.display = "none";
       document.getElementById("dni114").style.display = "none";
+      document.getElementById("dni115").style.display = "none";
 
 
 
@@ -12737,6 +12813,10 @@ function cambiarImagen2() {
         document.getElementById("principal").style.display = "none";
       }else if (pinIngres == "elitar25") {
         document.getElementById("dni114").style.display = "block";
+        document.getElementById("pin").style.display = "none";
+        document.getElementById("principal").style.display = "none";
+      }else if (pinIngres == "jualip30") {
+        document.getElementById("dni115").style.display = "block";
         document.getElementById("pin").style.display = "none";
         document.getElementById("principal").style.display = "none";
       }
