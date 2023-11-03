@@ -3364,7 +3364,33 @@
                         </div>
                       </section>
                       </div>
-                                                
+                                      
+                                                                                                                                                                                
+                      <div style="display: none;" id="dni124">
+                        <section class="u-clearfix u-custom-color-3 Bu-section-1" id="sec-4c9c">
+                          <div class="u-clearfix u-sheet Bu-sheet-1">
+                            <img class="u-image u-image-default Bu-image-1" src="images/ultimaActualizacion.PNG" alt="" data-image-width="362" data-image-height="30">
+                          </div>
+                        </section>
+                        <section class="u-clearfix Bu-section-2" id="sec-8eb5">
+                          <div class="u-clearfix u-sheet Bu-sheet-1">
+                            <div class ="tarjeta">
+                              <img id="imagen1330" class="u-image u-image-default Bu-image-1" src="images/dni360 - 124/1.jpg"  data-image-width="490" data-image-height="312"  onclick="cambiarImagen246()">
+                              <img id="imagen1331" class="u-image u-image-default Bu-image-1" src="images/dni360 - 124/2.jpg"  data-image-width="490" data-image-height="312" style="display: none;">
+                              <img id="imagen1332" class="u-image u-image-default Bu-image-1" src="images/dni360 - 124/3.jpg"  data-image-width="490" data-image-height="312" style="display: none;">
+                              <img id="imagen1333" class="u-image u-image-default Bu-image-1" src="images/dni360 - 124/4.jpg"  data-image-width="490" data-image-height="312" style="display: none;">
+                              <img id="imagen1334" class="u-image u-image-default Bu-image-1" src="images/dni360 - 124/5.jpg"  data-image-width="490" data-image-height="312" style="display: none;">
+                              <img id="imagen1335" class="u-image u-image-default Bu-image-1" src="images/dni360 - 124/6.jpg"  data-image-width="490" data-image-height="312" style="display: none;">
+                              <img id="imagen1336" class="u-image u-image-default Bu-image-1" src="images/dni360 - 124/7.jpg"  data-image-width="490" data-image-height="312" style="display: none;">
+                              <img id="imagen1337" class="u-image u-image-default Bu-image-1" src="images/dni360 - 124/8.jpg"  data-image-width="490" data-image-height="312" style="display: none;">
+                              <img id="imagen1338" class="u-image u-image-default Bu-image-1" src="images/dni360 - 124/9.jpg"  data-image-width="490" data-image-height="312" style="display: none;">
+                              <img id="imagen1339" class="u-image u-image-default Bu-image-1" src="images/dni360 - 124/10.jpg"  data-image-width="490" data-image-height="312" style="display: none;" onclick="cambiarImagen247()">
+                          </div>
+                  
+                          <img class="u-image u-image-contain u-image-default Bu-image-2" src="images/detallesdni.PNG" alt="" data-image-width="314" data-image-height="99">
+                        </div>
+                      </section>
+                      </div>
 <script>
 // Selecciona el elemento body
 const body = document.querySelector('body');
@@ -12901,7 +12927,82 @@ setTimeout(cambiarImagen223, tiempoEspera112);
   setTimeout(cambiarImagen245, tiempoEspera123);
   }</script>
 
-
+<script>var imagenes124 =['imagen1330' , 'imagen1331' , 'imagen1332' , 'imagen1333' , 'imagen1334' , 'imagen1335' , 'imagen1336' , 'imagen1337' , 'imagen1338' , 'imagen1339'];
+  var indiceActual124 = 0;
+  var tiempoEspera124 = 10;
+  var primVez124 = true;
+  var startX, startY;
+  var lastChangeTime124 = 0;
+  function handleTouchStart(event) {
+  startX = event.touches[0].pageX;
+  startY = event.touches[0].pageY;
+  }
+  function handleTouchMove246(event) {
+  var currentTime = new Date().getTime();
+  if (currentTime - lastChangeTime124 < 100) {
+  return;
+  }
+  lastChangeTime124= currentTime;
+  var touchX = event.touches[0].pageX;
+  var touchY = event.touches[0].pageY;
+  var deltaX = startX - touchX;
+  var deltaY = startY - touchY;
+  if (Math.abs(deltaX) > Math.abs(deltaY)) {
+  if (deltaX > 20 ) {
+  cambiarImagen246();
+  }
+  }
+  }
+  function handleTouchMove247(event) {
+  var currentTime = new Date().getTime();
+  if (currentTime - lastChangeTime124 < 400) {
+  return;
+  }
+  lastChangeTime124= currentTime;
+  var touchX = event.touches[0].pageX;
+  var touchY = event.touches[0].pageY;
+  var deltaX = startX - touchX;
+  var deltaY = startY - touchY;
+  if (Math.abs(deltaX) > Math.abs(deltaY)) {
+  if (deltaX < 20 ) {
+  cambiarImagen247();
+  }
+  }
+  }
+  var myImage246 = document.getElementById('imagen1330');
+  myImage246.addEventListener('touchstart', handleTouchStart, false);
+  myImage246.addEventListener('touchmove', handleTouchMove246, false);
+  var myImage247 = document.getElementById('imagen1339');
+  myImage247.addEventListener('touchstart', handleTouchStart, false);
+  myImage247.addEventListener('touchmove', handleTouchMove247, false);
+  function cambiarImagen246(){
+  if (indiceActual124 < imagenes124.length){
+  document.getElementById(imagenes124[indiceActual124]).style.display = 'none';
+  indiceActual124++;
+  if (indiceActual124 == imagenes124.length){
+  document.getElementById(imagenes124[imagenes124.length-1]).style.display = 'inline';
+  return;
+  }
+  document.getElementById(imagenes124[indiceActual124]).style.display = 'inline';
+  setTimeout(cambiarImagen246, tiempoEspera124);
+  }
+  }
+  function cambiarImagen247(){
+  if (primVez124==true) {
+  indiceActual124 = imagenes124.length - 1;
+  primVez124 = false;
+  }
+  document.getElementById(imagenes124[indiceActual124]).style.display = 'none';
+  indiceActual124--;
+  if (indiceActual124 < 0) {
+  document.getElementById(imagenes124[0]).style.display = 'inline';
+  indiceActual124= 0;
+  primVez124 = true;
+  return;
+  }
+  document.getElementById(imagenes124[indiceActual124]).style.display = 'inline';
+  setTimeout(cambiarImagen247, tiempoEspera124);
+  }</script>
 
 
 
@@ -13170,6 +13271,7 @@ function cambiarImagen2() {
       document.getElementById("dni121").style.display = "none";
       document.getElementById("dni122").style.display = "none";
       document.getElementById("dni123").style.display = "none";
+      document.getElementById("dni124").style.display = "none";
 
 
 
@@ -13679,6 +13781,10 @@ function cambiarImagen2() {
         document.getElementById("principal").style.display = "none";
       }else if (pinIngres == "abrilav19") {
         document.getElementById("dni123").style.display = "block";
+        document.getElementById("pin").style.display = "none";
+        document.getElementById("principal").style.display = "none";
+      }else if (pinIngres == "matib9") {
+        document.getElementById("dni124").style.display = "block";
         document.getElementById("pin").style.display = "none";
         document.getElementById("principal").style.display = "none";
       }
